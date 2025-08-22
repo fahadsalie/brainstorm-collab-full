@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #0b1220; --card: #0e1626; --muted: #94a3b8; }
+html, body, #__next { height: 100%; }
+body { background: #0b1220; color: #e2e8f0; }
+.card { background: var(--card); border-radius: 1rem; }
+.btn { @apply px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition; }
+.input { @apply px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-500 outline-none; }
+.tab { @apply px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 cursor-pointer; }
+.tab-active { @apply bg-blue-600; }
+.scroll { @apply overflow-y-auto; }
