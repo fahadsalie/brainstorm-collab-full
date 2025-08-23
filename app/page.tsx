@@ -1,6 +1,6 @@
-export const dynamic = 'force-dynamic'; // add this at top
+'use client';                         // must be first line
+export const dynamic = 'force-dynamic';
 
-'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
