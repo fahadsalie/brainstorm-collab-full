@@ -1,0 +1,18 @@
+// firestore.rules
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+
+    match /projects/{projectId} {
+      allow read, write: if isSignedIn();
+
+      match /notes/{noteId} { allow read, write: if isSignedIn(); }
+      match /messages/{msgId} { allow read, write: if isSignedIn(); }
+      match /attachments/{fileId} { allow read, write: if isSignedIn(); }
+      match /state/{docId} { allow read, write: if isSignedIn(); }
+      match /audit/{eventId} { allow read, write: if isSignedIn(); }
+      match /members/{memberId} { allow read, write: if isSignedIn(); }
+    }
+  }
+}
