@@ -1,12 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm ci || npm i",
-  "outputDirectory": ".next",
   "framework": "nextjs",
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  }
+  "installCommand": "npm ci || npm i",
+  "buildCommand": "npm run build"
 }
