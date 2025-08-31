@@ -4,7 +4,6 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// Config is pulled from environment variables
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
@@ -15,19 +14,17 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-// Ensure Firebase only initializes once
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
-
-// Export the Google provider for sign-in
 export const provider = new GoogleAuthProvider();
 
-// ---- Extra flags used in your UI (Projects page / EnvGate example) ----
 export const MISSING_KEYS = Object.entries(firebaseConfig)
   .filter(([_, v]) => !v)
   .map(([k]) => k);
 
 export const FIREBASE_READY = MISSING_KEYS.length === 0;
+
+export default app;
