@@ -1,0 +1,11 @@
+{
+  "HOW_TO_APPLY": "Open tsconfig.json and ensure these fields exist at root:",
+  "add_to_tsconfig": {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./*"]
+      }
+    }
+  }
+}

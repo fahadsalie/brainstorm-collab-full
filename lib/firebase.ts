@@ -1,4 +1,4 @@
-// Optional: Safe Firebase init (won't crash if envs are missing)
+// lib/firebase.ts (safe/no-crash if envs are missing)
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";

@@ -1,0 +1,1 @@
+Replace the files above in your repo. Then add firebase to dependencies and add tsconfig path alias as shown in the *_PATCH.json files. Redeploy on Vercel.

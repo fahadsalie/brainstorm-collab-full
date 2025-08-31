@@ -1,0 +1,6 @@
+{
+  "HOW_TO_APPLY": "Open your package.json and make sure 'firebase' is in dependencies. Example below:",
+  "example_dependencies": {
+    "firebase": "^10.12.4"
+  }
+}
