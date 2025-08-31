@@ -1,0 +1,6 @@
+{
+  "HOW_TO_APPLY": "If you prefer to keep your original code, add 'uuid' to dependencies in package.json:",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
