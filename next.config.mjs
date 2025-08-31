@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {},
-  output: undefined
+  // Keep defaults; do not force static export
+  experimental: {}
 };
 
 export default nextConfig;

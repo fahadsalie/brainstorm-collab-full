@@ -7,7 +7,7 @@ export const fetchCache = 'force-no-store';
 
 export const metadata: Metadata = {
   title: 'Brainstorm Collab',
-  description: 'Collaboration app'
+  description: 'Clean working baseline'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
