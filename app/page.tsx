@@ -1,17 +1,12 @@
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-import Link from "next/link";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main style={{ padding: "2rem", lineHeight: 1.6 }}>
-      <h1>Home ✅</h1>
+    <main className="p-10">
+      <h1 className="text-2xl font-bold">Home ✅</h1>
       <p>This is a clean, deploy-ready Next.js app. No revalidate errors.</p>
-      <ul>
-        <li><Link href="/dashboard">Go to /dashboard</Link></li>
-        <li><Link href="/projects">Go to /projects</Link></li>
-      </ul>
+      <a href="/dashboard" className="text-blue-500 underline">Go to /dashboard</a>
     </main>
   );
 }
